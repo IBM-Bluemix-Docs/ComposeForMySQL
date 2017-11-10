@@ -14,7 +14,7 @@ lastupdated: "2017-06-16"
 # Connecting an external application
 {: #connecting-external-app}
 
-There are two ways of connecting an external application to {{site.data.keyword.composeForMySQL}}:
+There are two ways of connecting an external application to {{site.data.keyword.composeForMySQL_full}}:
 
 - A **Connection String** can be used by some client libraries and contains all the information needed for other libraries to connect.
 

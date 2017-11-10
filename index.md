@@ -27,7 +27,7 @@ When you provision your {{site.data.keyword.composeForMySQL}} instance you can c
 
 ## Managing Compose for MySQL
 
-You can manage your service from the service dashboard. Here you can find information about your {{site.data.keyword.Bluemix_notm}} Compose database and how to connect to it. You can also:
+You can manage your service from the service dashboard. Here you can find information about your {{site.data.keyword.cloud}} Compose database and how to connect to it. You can also:
 - manage your backups
 - allocate more resources for your service
 - change the service password
@@ -39,10 +39,10 @@ For more information, see [Settings](./dashboard-settings.html).
 
 You can connect to your service using the credentials that are created along with the service, or with the connection strings and command line that are provided in the *Overview* tab of your service dashboard.
 
-## Connecting a {{site.data.keyword.Bluemix_notm}} application to Compose for MySQL
+## Connecting an {{site.data.keyword.cloud_notm}} application to Compose for MySQL
 
-To connect a {{site.data.keyword.Bluemix_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect a {{site.data.keyword.Bluemix_notm}} application to your service in [Connecting a {{site.data.keyword.Bluemix_notm}} Application](./connecting-bluemix-app.html).
+To connect an {{site.data.keyword.cloud_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect an {{site.data.keyword.cloud_notm}} application to your service in [Connecting an {{site.data.keyword.cloud_notm}} Application](./connecting-bluemix-app.html).
 
-## Connecting to Compose for MySQL from outside {{site.data.keyword.Bluemix_notm}}
+## Connecting to Compose for MySQL from outside {{site.data.keyword.cloud_notm}}
 
-If you want to connect to your service from outside {{site.data.keyword.Bluemix_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](./connecting-external.html).
+If you want to connect to your service from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](./connecting-external.html).
