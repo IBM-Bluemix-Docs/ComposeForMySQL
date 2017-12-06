@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2017
-lastupdated: "2017-04-27"
+lastupdated: "2017-10-23"
 ---
 
 {:new_window: target="_blank"}
@@ -21,19 +21,32 @@ MySQL は開発者がアプリケーションに構想を描くための便利�
 高可用性、冗長度、自動バックアップを備えた、使いやすい自動スケーリング・デプロイメント・システムを提供します。
 {:shortdesc}
 
-**注:** {{site.data.keyword.composeForMySQL_full}} には、Compose UI へのアクセス権限がありません。
-詳しくは、「[Compose on Bluemix Support](https://help.compose.com/docs/bluemix-compose-support)」を参照してください。
+## Compose for MySQL サービス・インスタンスの作成
 
-{{site.data.keyword.composeForMySQL}} の使用を開始するには、以下の手順を実行します。
+[{{site.data.keyword.composeForMySQL}} インスタンスを作成します](https://console.ng.bluemix.net/catalog/services/compose-for-mysql/)。
 
-1. [{{site.data.keyword.composeForMySQL}} インスタンスを作成します](https://console.ng.bluemix.net/catalog/services/compose-for-mysql/)。
+サービスのインスタンスを作成するときは、サービスの名前と資格情報名の両方を選択します。サービスをバインドしないでおきます。サービスをプロビジョンするときに指定される資格情報を使用して、アプリケーションをサービスに接続できます。「使用可能な資格情報」セクションには、各種の資格情報値がリストされています。
 
-   サービスのインスタンスを作成するときは、サービスの名前と資格情報名の両方を選択します。サービスをバインドしないでおきます。サービスをプロビジョンするときに指定される資格情報を使用して、アプリケーションをサービスに接続できます。「使用可能な資格情報」セクションには、各種の資格情報値がリストされています。
+{{site.data.keyword.composeForMySQL}} インスタンスのプロビジョンでは、*標準*プランと*エンタープライズ*・プランのどちらかを選択できます。*エンタープライズ*・プランの場合は、{{site.data.keyword.composeForMySQL}} インスタンスを使用可能な {{site.data.keyword.composeEnterprise}} クラスターにプロビジョンできます。{{site.data.keyword.composeEnterprise}} は、企業コンプライアンスで要求されるセキュリティーと分離を提供し、専用ネットワーキングを使用してデプロイ済みデータベースのパフォーマンスを確保します。詳しくは、[Compose Enterprise 文書](../ComposeEnterprise/index.html)を参照してください。
 
-2. {{site.data.keyword.composeForMySQL}} サービスに接続します。
+## Compose for MySQL の管理
 
-  アプリケーションをサービスに接続するには、サービスと共に作成された[資格情報](./credentials.html)を使用します。
+サービス・ダッシュボードからサービスを管理できます。ダッシュボードには {{site.data.keyword.cloud}} Compose データベースとそれへの接続方法に関する情報が示されます。また、以下の操作を行うこともできます。
+- バックアップを管理する
+- サービスに割り振るリソースを増やす
+- サービス・パスワードを変更する
+- ホワイトリストを使用してデータベースへのアクセスを制限する
+詳しくは、[設定](./dashboard-settings.html)を参照してください。
 
-  [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs) サンプル・アプリケーションをダウンロードし、README ファイル内の指示に従ってください。その後、Bluemix コンソール内のアプリケーション詳細ページで、**「アプリの表示 (View APP)」**をクリックします。
 
-  サンプル・アプリケーションでは、Node.js を使用して {{site.data.keyword.composeForMySQL}} サービスに接続する方法を示します。
+## Compose for MySQL への接続
+
+サービスに接続するには、サービスと一緒に作成された資格情報を使用するか、サービス・ダッシュボードの*「概要」*タブに表示される接続ストリングとコマンド・ラインを使用します。
+
+## {{site.data.keyword.cloud_notm}} アプリケーションを Compose for MySQL に接続する場合
+
+{{site.data.keyword.cloud_notm}} アプリケーションをサービスに接続するには、サービスと一緒に作成された資格情報を使用します。{{site.data.keyword.cloud_notm}} アプリケーションをサービスに接続する方法については、[{{site.data.keyword.cloud_notm}} アプリケーションの接続](./connecting-bluemix-app.html)を参照してください。
+
+## {{site.data.keyword.cloud_notm}} の外部から Compose for MySQL に接続する場合
+
+{{site.data.keyword.cloud_notm}} の外部からサービスに接続する場合は、用意されている接続ストリングやコマンド・ラインを使用できます。接続方法については、[外部アプリケーションの接続](./connecting-external.html)を参照してください。
