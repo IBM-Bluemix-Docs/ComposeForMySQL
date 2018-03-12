@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-16"
 ---
 
@@ -18,7 +18,7 @@ Es gibt zwei Möglichkeiten, eine externe Anwendung mit {{site.data.keyword.comp
 
 - Eine **Verbindungszeichenfolge** kann von bestimmten Clientbibliotheken verwendet werden und enthält alle Informationen, die andere Bibliotheken zum Herstellen einer Verbindung benötigen.
 
-- Die **Befehlszeile** ist ein vorformatierter Befehl, der `mysql` mit den korrekten Parametern aufruft. 
+- Die **Befehlszeile** ist ein vorformatierter Befehl, der `mysql` mit den korrekten Parametern aufruft.
 
 Beides finden Sie auf der Seite *Übersicht* Ihres {{site.data.keyword.composeForPostgreSQL}}-Service.
 
@@ -108,7 +108,7 @@ const connection = mysql.createConnection(
         }
 });
 
-connection.query('SHOW DATABASES', (err, rows) => {
+connection.query('SHOW DATABASES', (err, rows) => {  
     if (err) throw err;
     console.log('Connected!');
     for (let i = 0, len = rows.length; i < len; i++) {
@@ -144,7 +144,7 @@ import (
     _ "github.com/go-sql-driver/mysql"
 )
 
-func main() {
+func main() {  
     db, err := sql.Open("mysql", "admin:mypass@tcp(aws-us-east-1-portal.23.dblayer.com:15918)/compose?tls=skip-verify")
 	if err != nil {
         log.Fatal(err)
@@ -194,7 +194,7 @@ cur.execute("SHOW DATABASES")
 for row in cur:
     print(row[0])
 
-connect.close()
+connect.close() 
 ```
 
 Hinweise:
@@ -269,7 +269,7 @@ Es gibt eine Reihe von MySQL-Treibern für Ruby. Im Beispielverbindungscode wird
 
 Sie können eine Verbindung zu MySQL erstellen, indem Sie MySQL2 entsprechend den Anweisungen im Github-Repository des Treibers installieren und den folgenden Code verwenden:
 ```ruby
-require "mysql2"
+require "mysql2"  
 config = {
     "hostname": "aws-us-east-1-portal.23.dblayer.com",
     "port": 15942,
@@ -281,7 +281,7 @@ config = {
 }
 conn = Mysql2::Client.new(config)
 results = conn.query("SHOW DATABASES")
-results.each {|row| puts row["Database"]}
+results.each {|row| puts row["Database"]}  
 ```
 Hinweise:
 - Der Hashwert `config` enthält die gesamte Verbindungskonfiguration, einschließlich der Einrichtung einer SSL-Verbindung. Weitere Informationen zu allen Konfigurationsoptionen finden Sie in der [MySQL2-Readme-Datei](https://github.com/brianmario/mysql2).

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-16"
 ---
 
@@ -154,7 +154,7 @@ func main() {
 	rows, err := db.Query("SHOW DATABASES")
     if err != nil {
     	log.Fatal(err)
-    }
+    	}
 
 	var dbNames string
     for rows.Next() {
