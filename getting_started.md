@@ -14,7 +14,7 @@ lastupdated: "2018-02-16"
 
 
 # Getting started tutorial
-This tutorial uses the [compose-mysql-helloworld-nodejs](https://github.com/IBM-Cloud/compose-mysql-helloworld-nodejs) sample app to demonstrate how to use Node.js to connect to a {{site.data.keyword.composeForMySQL_full}} service using the provided credentials. The application creates, reads from, and writes to a database using data supplied through the app's web interface.
+This tutorial uses the [compose-mysql-helloworld-nodejs](https://github.com/IBM-Cloud/compose-mysql-helloworld-nodejs) sample app to demonstrate how to use Node.js to connect to an {{site.data.keyword.composeForMySQL_full}} service using the provided credentials. The application creates, reads from, and writes to a database using data supplied through the app's web interface.
 {: shortdesc}
 
 ## Before you begin
