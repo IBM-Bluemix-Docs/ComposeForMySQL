@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2018
-lastupdated: "2017-10-23"
+lastupdated: "2018-03-26"
 ---
 
 {:new_window: target="_blank"}
@@ -31,9 +31,12 @@ lastupdated: "2017-10-23"
 - 管理备份
 - 为服务分配更多资源
 - 更改服务密码
-- 使用白名单来限制对数据库的访问。
+- 使用白名单来限制对数据库的访问。 
+
 有关更多信息，请参阅[设置](./dashboard-settings.html)。
 
+{{site.data.keyword.composeForMySQL}} 依赖于 Cloud Foundry 角色来管理对服务的访问权。只有具有开发者角色的用户才能查看或使用服务仪表板。有关 Cloud Foundry 角色的更多信息，请参阅 [Cloud Foundry 访问权](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess)和[管理 Cloud Foundry 访问权](https://console.bluemix.net/docs/iam/mngcf.html#mngcf)页面。
+{: .tip}
 
 ## 连接到 {{site.data.keyword.composeForMySQL}}
 

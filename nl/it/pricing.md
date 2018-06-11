@@ -15,7 +15,7 @@ lastupdated: "2018-01-03"
 {: #pricing}
 
 ## Configurazione di base
-Un servizio {{site.data.keyword.composeForMySQL_full}} viene fornito con tre nodi identici, ognuno con 1GB di archiviazione e 102MB di memoria, che equivale a 1 unità di risorse. Il servizio _include_ la replica e l'elevata disponibilità, per cui ogni unità e il prezzo per unità _include_ il costo delle risorse in tutti e tre i nodi.  
+Un servizio {{site.data.keyword.composeForMySQL_full}} viene fornito con tre nodi identici, ognuno con 1GB di archiviazione e 102MB di memoria, che equivale a 1 unità di risorse. Il servizio _include_ la replica e l'elevata disponibilità, per cui ogni unità e il prezzo per unità _include_ il costo delle risorse in tutti e tre i nodi. 
 
 Inoltre include due portali HAProxy, ognuno con 64MB di memoria per gestire l'autenticazione, HTTPS e la whitelist di IP.
 
@@ -31,7 +31,7 @@ Ogni unità aggiuntiva (1GB di archiviazione/102MB di memoria) ha un prezzo per 
 ### Prezzi a livelli
 Numero di unità|Prezzo per unità
 ----------|-----------
-1 - 9 unità|prezzo per unità di base -- $18.00 USD/Unità 
+1 - 9 unità|prezzo per unità di base -- $18.00 USD/Unità
 10 - 24 unità|10% di riduzione -- $16.20 USD/Unità
 25 - 49 unità|20% di riduzione -- $14.40 USD/Unità
 50 - 99 unità|30% di riduzione -- $12.60 USD/Unità

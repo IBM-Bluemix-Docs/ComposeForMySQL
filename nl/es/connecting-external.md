@@ -154,7 +154,7 @@ func main() {
 	rows, err := db.Query("SHOW DATABASES")
     if err != nil {
     	log.Fatal(err)
-    	}
+    }
 
 	var dbNames string
     for rows.Next() {

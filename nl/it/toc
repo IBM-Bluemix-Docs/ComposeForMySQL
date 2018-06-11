@@ -1,12 +1,12 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-mysql" audience="service"  href="/docs/services/ComposeForMySQL/getting_started.html"}
+{: .toc subcollection="compose-for-mysql" audience="service"  href="/docs/services/ComposeForMySQL/index.html"}
 Compose For MySQL
 
 	{: .navgroup id="learn"}
-	getting_started.md
 	index.md
+	getting_started.md
 	pricing.md
 
 	{: .topicgroup}
