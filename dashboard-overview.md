@@ -31,7 +31,7 @@ An internal identifier for the service.
 
 ### Usage
 
-The size of your database and the amount of storage provided by your service plan.
+The size of your database and the amount of storage that is provided by your service plan.
 
 ## Current Jobs
 
@@ -39,17 +39,17 @@ Making administrative changes to your service (such as scaling, or taking a manu
 
 ## Connection Strings
 
-Connection Strings can be used by some client libraries and contain all the information needed for other libraries to connect. You can find out how to use a Connection String to connect to your service in [Connecting an external application](./connecting-external.html).
+Connection Strings can be used by some client libraries and contain all the information that is needed for other libraries to connect. You can find out how to use a Connection String to connect to your service in [Connecting an external application](./connecting-external.html).
 
 You'll find each Connection String for your service in a different tab in the _Connection Strings_ panel.
 
 ### Connection String
 
-The **Connection String** can be used by some client libraries and contains all the information needed for other libraries to connect. You can find out how to use the Connection String to connect in [Connecting an external application](./connecting-external.html).
+The **Connection String** can be used by some client libraries and contains all the information that is needed for other libraries to connect. You can find out how to use the Connection String to connect in [Connecting an external application](./connecting-external.html).
 
 ### Command Line
 
-The **Command Line** is a preformatted command you can use to connect to MySQL. To do so, you have to install MySQL on your local machine. You can find out about how to use it in [Connecting an external application](./connecting-external.html).
+The **Command Line** is a preformatted command that you can use to connect to MySQL. To do so, you must install MySQL on your local machine. You can find out about how to use it in [Connecting an external application](./connecting-external.html).
 
 ### SSL Certificate
 
@@ -62,7 +62,7 @@ You can manage your {{site.data.keyword.composeForMySQL}} service through the {{
 
 ### Foundation Endpoint
 
-The foundation endpoint is composed of the region the service resides in and the service instance id. It will be at the start of every endpoint.
+The foundation endpoint is composed of the region the service resides in and the service instance ID. It is at the start of every endpoint.
 
 ### Deployment ID
 
