@@ -31,4 +31,8 @@ Feldname|Beschreibung
 `ca_certificate_base64`|Ein selbst signiertes Zertifikat, mit dem bestätigt wird, dass eine Anwendung eine Verbindung zum geeigneten Server herstellt. Das Zertifikat ist base64-codiert.
 `deployment_id`|Eine interne ID für den Service entsprechend der Erstellung in Compose.
 `uri`|Der bei der Herstellung einer Verbindung zum Service verwendete URI, der Folgendes enthält: Schema (`mysql:`), Benutzername und Kennwort des Administrators, Hostname des Servers sowie die Nummer des Ports, zu dem die Verbindung hergestellt werden soll, und der vhost-Name.
+`uri_direct_1`|Ein sekundärer URI, der bei der Verbindungsherstellung zum Service verwendet werden kann. Format wie für `uri`.
+`uri_cli_1`|Eine sekundäre `mysql`-Shellbefehlszeile, die eine Verbindung zur Datenbankinstanz herstellt.
 {: caption="Tabelle 1. Compose for MySQL - Berechtigungsnachweise" caption-side="top"}
+
+**Hinweis:** Zwei `haproxy`-Portale bieten Zugriff auf den MySQL-Service. Sowohl `uri` als auch `uri_direct_1` können zum Herstellen der Verbindung verwendet werden. In Ihrer Anwendung wechseln Sie zwischen `uri` und `uri_direct_1`, um die Reaktionen auf Verbindungsfehler zu verwalten.

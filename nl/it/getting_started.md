@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2018
-lastupdated: "2018-02-16"
+lastupdated: "2018-05-23"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,7 +14,7 @@ lastupdated: "2018-02-16"
 
 
 # Esercitazione introduttiva
-Questa esercitazione utilizza l'applicazione di esempio [compose-mysql-helloworld-nodejs](https://github.com/IBM-Cloud/compose-mysql-helloworld-nodejs) che illustra come utilizzare Node.js per il collegamento a un servizio {{site.data.keyword.composeForMySQL_full}} utilizzando le credenziali fornite. L'applicazione crea, legge da, e scrive su un database utilizzando i dati forniti tramite l'interfaccia web dell'applicazione.
+Questa esercitazione utilizza l'applicazione di esempio [compose-mysql-helloworld-nodejs](https://github.com/IBM-Cloud/compose-mysql-helloworld-nodejs) per illustrare la modalità di connessione di un'applicazione a un servizio {{site.data.keyword.composeForMySQL_full}}. L'applicazione crea, legge da, e scrive su un database utilizzando i dati forniti tramite l'interfaccia web dell'applicazione.
 {: shortdesc}
 
 ## Prima di iniziare
@@ -30,7 +30,12 @@ Puoi creare un servizio {{site.data.keyword.composeForMySQL}} dalla pagina [{{si
 
 Scegli un nome del servizio, una regione, un'organizzazione e uno spazio in cui eseguire il provisioning del servizio e per il campo **Select a database version**, scegli _Latest Preferred Version_.
 
-Successivamente, scegli un piano dei prezzi per il tuo servizio. Puoi scegliere i piani *Standard* o *Enterprise*. Con il piano *Enterprise*, puoi eseguire il provisioning della tua istanza {{site.data.keyword.composeForMySQL}} in un cluster {{site.data.keyword.composeEnterprise}} disponibile. {{site.data.keyword.composeEnterprise}} fornisce la sicurezza e l'isolamento necessari per la conformità aziendale e utilizza la rete dedicata per garantire le prestazioni dei database distribuiti. Consulta la documentazione di [Compose Enterprise](../ComposeEnterprise/index.html) per ulteriori dettagli.
+Successivamente, scegli un piano dei prezzi per il tuo servizio. Puoi scegliere i piani *Standard* o *Enterprise*. Con il piano *Enterprise*, puoi eseguire il provisioning della tua istanza {{site.data.keyword.composeForMySQL}} in un cluster {{site.data.keyword.composeEnterprise}} disponibile. {{site.data.keyword.composeEnterprise}} fornisce la sicurezza e l'isolamento necessari per la conformità aziendale e utilizza la rete dedicata per garantire le prestazioni dei database distribuiti. Per ulteriori dettagli, consulta la documentazione di [{{site.data.keyword.composeEnterprise}}](/docs/services/ComposeEnterprise/index.html).
+
+Fai clic su ** Create** per eseguire il provisioning del tuo servizio. Il completamento del provisioning può richiedere del tempo. Puoi verificare l'avanzamento andando alla vista _Manage_ per il servizio.
+
+Non sarai in grado di collegare un'applicazione al servizio finché il provisioning non sarà stato completato.
+{: .tip}
 
 ## Passo 2: clona l'applicazione di esempio Hello World da Github
 
@@ -56,67 +61,32 @@ Utilizza npm per installare le dipendenze.
   npm install
   ```
 
-## Passo 4: crea le credenziali del servizio
-
-Prima di passare l'applicazione a {{site.data.keyword.cloud_notm}} puoi eseguirla localmente per verificare la connessione alla tua istanza del servizio {{site.data.keyword.composeForMySQL}}. Per la connessione al servizio dovrai creare una serie di credenziali del servizio.
-
-1. Dal tuo dashboard {{site.data.keyword.cloud_notm}}, apri la tua istanza del servizio {{site.data.keyword.composeForMySQL}}.
-2. Seleziona _Service Credentials_ dal menu principale per aprire la vista delle credenziali del servizio.
-3. Fai clic su **New Credential**.
-4. Scegli un nome per le tue credenziali e fai clic su **Add**.
-5. Le tue nuove credenziali sono ora elencate. Fai clic su **View credentials** nella riga corrispondente della tabella per visualizzare le credenziali e fai clic sull'icona **Copy** per copiare le tue credenziali.
-6. In un editor di tua scelta, crea un nuovo file con quanto segue, inserendo le tue credenziali come mostrato di seguito:
-
-  ```
-  {
-    "services": {
-      "compose-for-mysql": [
-        {
-          "credentials": INSERISCI QUI LE TUE CREDENZIALI
-        }
-      ]
-    }
-  }
-  ```
-6. Salva il file come `vcap-local.json` nella directory in cui si trova l'applicazione di esempio.
-
-Per evitare di esporre accidentalmente le tue credenziali quando passi un'applicazione a Github o a {{site.data.keyword.cloud_notm}} devi essere sicuro che il file che contiene le tue credenziali sia elencato in ignora file rilevanti. Se apri `.cfignore` e `.gitignore` nella tua directory dell'applicazione vedrai che `vcap-local.json` è elencato in entrambi, per cui non sarà incluso nei file che vengono caricati quando passi l'applicazione a Github o a {{site.data.keyword.cloud_notm}}.
-{: .tip}
-
-## Passo 5: esegui l'applicazione localmente
-
-```
-npm start
-```
-
-L'applicazione è ora in esecuzione all'indirizzo [http://localhost:8080](http://localhost:8080). Puoi aggiungere parole e definizioni al tuo database {{site.data.keyword.composeForMySQL}}. Quando arresti e riavvii l'applicazione, tutte le parole che hai già aggiunto vengono visualizzate quando aggiorni la pagina.
-
 Il passo successivo è di collegare la tua applicazione alla tua istanza del servizio e distribuirla a {{site.data.keyword.cloud_notm}}.
 
-## Passo 6: scarica e installa lo strumento CLI {{site.data.keyword.cloud_notm}}
+## Passo 4: scarica e installa lo strumento CLI {{site.data.keyword.cloud_notm}}
 
 Lo strumento CLI {{site.data.keyword.cloud_notm}} è quello che utilizzerai per comunicare con {{site.data.keyword.cloud_notm}} dal tuo terminale o dalla riga di comando. Per i dettagli, consulta [Scarica e installa la CLI {{site.data.keyword.cloud_notm}}](https://console.{DomainName}/docs/cli/reference/bluemix_cli/download_cli.html).
 
-## Passo 7: connessione a {{site.data.keyword.cloud_notm}}
+## Passo 5: connessione a {{site.data.keyword.cloud_notm}}
 
 1. Collegati a {{site.data.keyword.cloud_notm}} nello strumento della riga di comando e segui le istruzioni per accedere.
 
   ```
-  bx login
+  ibmcloud login
   ```
 
-  Se hai un ID utente federato, utilizza il comando `bx login --sso` per accedere con il tuo ID SSO (Single Sign On). Consulta [Accesso con un ID federato](https://console.{DomainName}/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
+  Se hai un ID utente federato, utilizza il comando `ibmcloud login --sso` per accedere con il tuo ID SSO (Single Sign On). Consulta [Accesso con un ID federato](https://console.{DomainName}/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
   {: .tip}
 
 2. Assicurati di puntare all'organizzazione e allo spazio {{site.data.keyword.cloud_notm}} corretti.
 
   ```
-  bx target --cf
+  ibmcloud target --cf
   ```
 
   Scegli dalle opzioni fornite, utilizzando gli stessi valori che hai utilizzato quando hai creato il servizio.
 
-## Passo 8: aggiorna il file manifest dell'applicazione
+## Passo 6: aggiorna il file manifest dell'applicazione
 {: #update-manifest}
 
 {{site.data.keyword.cloud_notm}} utilizza un file manifest - `manifest.yml` per associare un'applicazione a un servizio. Segui questa procedura per creare il tuo file manifest.
@@ -135,26 +105,67 @@ Lo strumento CLI {{site.data.keyword.cloud_notm}} è quello che utilizzerai per 
 
 2. Modifica il valore `host` con qualcosa di univoco. L'host che scegli determinerà il dominio secondario dell'URL della tua applicazione:  `<host>.mybluemix.net`.
 3. Modifica il valore `name`. Il valore che scegli sarà il nome dell'applicazione come viene visualizzato nel tuo dashboard {{site.data.keyword.cloud_notm}}.
-4. Aggiorna il valore `services` in modo che corrisponda al nome del servizio che hai creato in [Crea una istanza del servizio {{site.data.keyword.composeForMySQL}}](#create-service). 
+4. Aggiorna il valore `services` in modo che corrisponda al nome del servizio che hai creato in [Crea una istanza del servizio {{site.data.keyword.composeForMySQL}}](#create-service).
 
-## Passo 9: trasmetti la tua applicazione a {{site.data.keyword.cloud_notm}}.
+## Passo 7: esegui il push della tua applicazione a {{site.data.keyword.cloud_notm}}.
 
-Quando trasmetti l'applicazione sarà automaticamente associata al servizio specificato nel file manifest.
+Questo passo avrà esito negativo se il servizio non ha terminato il provisioning dal Passo 1. Puoi verificare l'avanzamento del provisioning per assicurarti che sia stato completato passando alla vista _Manage_ per il servizio.
+{: .tip}
+
+Quando ne esegui il push, l'applicazione sarà automaticamente associata al servizio specificato nel file manifest.
 
 ```
-bx cf push
+ibmcloud cf push
 ```
 
-## Passo 10: controlla che l'applicazione sia collegata al tuo servizio {{site.data.keyword.composeForMySQL}}
+## Passo 8: controlla che l'applicazione sia collegata al tuo servizio {{site.data.keyword.composeForMySQL}}
 
 1. Passa al tuo dashboard del servizio {{site.data.keyword.composeForMySQL}}
 2. Seleziona _Connections_ dal menu del dashboard. La tua applicazione dovrebbe essere elencata in _Connected Applications_.
 
 Se la tua applicazione non è elencata, ripeti i passi da 7 a 8, assicurandoti di aver immesso i dettagli corretti in [manifest.yml](#update-manifest).
 
-## Passo 11: utilizza l'applicazione
+## Passo 9: utilizza l'applicazione
 
 Ora, quando visiti `<host>.mybluemix.net/` potrai visualizzare i contenuti della tua raccolta {{site.data.keyword.composeForMySQL}}. Man mano che aggiungi le parole e le loro definizioni, vengono aggiunte al database e visualizzate. Se arresti e riavvii l'applicazione vedrai elencate tutte le parole e le definizioni che hai già aggiunto.
+
+
+## Esecuzione in locale dell'applicazione
+
+Invece di eseguire il push dell'applicazione a {{site.data.keyword.cloud_notm}} puoi eseguirla localmente per verificare la connessione alla tua istanza del servizio {{site.data.keyword.composeForMySQL}}. Per la connessione al servizio dovrai creare una serie di credenziali del servizio.
+
+1. Dal tuo dashboard {{site.data.keyword.cloud_notm}}, apri la tua istanza del servizio {{site.data.keyword.composeForMySQL}}.
+2. Seleziona _Service Credentials_ dal menu principale per aprire la vista delle credenziali del servizio.
+3. Fai clic su **New Credential**.
+4. Scegli un nome per le tue credenziali e fai clic su **Add**.
+5. Le tue nuove credenziali sono ora elencate. Fai clic su **View credentials** nella riga corrispondente della tabella per visualizzare le credenziali e fai clic sull'icona **Copy** per copiare le tue credenziali.
+6. Nell'editor di tua scelta, crea un nuovo file con quanto segue, sostituendo il testo 'INSERISCI QUI LE TUE CREDENZIALI' con il contenuto completo delle credenziali che hai copiato nel passo precedente.
+
+  ```
+  {
+    "services": {
+      "compose-for-mysql": [
+        {
+          "credentials": INSERISCI QUI LE TUE CREDENZIALI
+        }
+      ]
+    }
+  }
+  ```
+7. Salva il file come `vcap-local.json` nella directory in cui si trova l'applicazione di esempio.
+
+Per evitare di esporre accidentalmente le tue credenziali quando passi un'applicazione a Github o a {{site.data.keyword.cloud_notm}} devi essere sicuro che il file che contiene le tue credenziali sia elencato in ignora file rilevanti. Se apri `.cfignore` e `.gitignore` nella tua directory dell'applicazione vedrai che `vcap-local.json` è elencato in entrambi, per cui non sarà incluso nei file che vengono caricati quando passi l'applicazione a Github o a {{site.data.keyword.cloud_notm}}.
+{: .tip}
+
+Ora avvia il server locale.
+
+```
+npm start
+```
+
+L'applicazione è ora in esecuzione all'indirizzo [http://localhost:8080](http://localhost:8080). Puoi aggiungere parole e definizioni al tuo database {{site.data.keyword.composeForMySQL}}. Quando arresti e riavvii l'applicazione, tutte le parole che hai già aggiunto vengono visualizzate quando aggiorni la pagina.
+
+Per informazioni sulle credenziali che hai creato per l'applicazione per il collegamento al tuo servizio, consulta [Credenziali disponibili](./connecting-bluemix-app.html#available-credentials).
 
 
 ## Passi successivi
@@ -166,7 +177,5 @@ Per iniziare ad esplorare il tuo servizio {{site.data.keyword.composeForMySQL}},
 - [Panoramica sul dashboard](./dashboard-overview.html)
 - [Backup](./dashboard-backups.html)
 - [Impostazioni  ](./dashboard-settings.html)
-
-Per informazioni sulle credenziali che hai creato per l'applicazione per il collegamento al tuo servizio, consulta [Credenziali disponibili](./connecting-bluemix-app.html#available-credentials).
 
 [ibm_cloud_signup_url]: https://ibm.biz/compose-for-mysql-signup

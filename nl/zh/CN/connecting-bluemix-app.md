@@ -31,4 +31,8 @@ lastupdated: "2017-06-16"
 `ca_certificate_base64`|自签名证书，用于确认应用程序连接到相应的服务器。此证书是 Base64 编码。
 `deployment_id`|在 Compose 内创建的服务的内部标识。
 `uri`|连接到服务时使用的 URI，包括模式 (`mysql:`)、管理用户名和密码、服务器的主机名、要连接到的端口号和 vhost 名称。
+`uri_direct_1`|连接到服务时可使用的第二个 URI。格式与 `uri` 一样。
+`uri_cli_1`|连接到数据库实例的第二个 `mysql` shell 命令行。
 {: caption="表 1. Compose for MySQL 凭证" caption-side="top"}
+
+**注：**两个 `haproxy` 门户网站提供对 MySQL 服务的访问权。`uri` 和 `uri_direct_1` 都可用于连接。在您的应用程序中，在 `uri` 和 `uri_direct_1` 之间进行切换，以管理对连接失败的响应。

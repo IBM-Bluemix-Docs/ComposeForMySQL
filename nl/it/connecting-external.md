@@ -59,7 +59,7 @@ Copia e incolla il testo da `-----BEGIN CERTIFICATE-----` a `-----END CERTIFICAT
 
 Per collegarti direttamente e gestire la tua distribuzione Compose for MySQL, puoi utilizzare la riga di comando. Per farlo, devi installare MySQL nella tua macchina locale. Ogni piattaforma dispone dei propri pacchetti di installazione, per cui scegli quello migliore per te. Puoi trovare i pacchetti della comunità Oracle all'indirizzo [http://dev.mysql.com/downloads/](http://dev.mysql.com/downloads/). Prima di scaricarli, tieni presente che su Linux normalmente troverai MySQL nel tuo repository delle distribuzioni. Se stai utilizzando un Mac, puoi installare MySQL con Homebrew, che compila e installa l'ultima versione.
 
-Per accedere alla tua distribuzione tramite il terminale, copia e incolla la stringa della riga di comando fornita nel pannello *Connection info* nel tuo terminale per collegarti alla tua distribuzione.
+Per accedere alla tua distribuzione tramite il terminale, copia e incolla la stringa della riga di comando fornita nel pannello *Connection info* nel tuo terminale per connetterti alla tua distribuzione.
 
 ```shell
 mysql -u [username] -p --host aws-us-east-1-portal.5.dblayer.com --port 16967 --ssl-mode=REQUIRED

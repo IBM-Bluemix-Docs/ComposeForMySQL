@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-mysql" audience="service"  href="/docs/services/ComposeForMySQL/index.html"}
+{: .toc subcollection="compose-for-mysql" audience="service" arm="2639423" href="/docs/services/ComposeForMySQL/index.html"}
 Compose For MySQL
 
 	{: .navgroup id="learn"}
@@ -21,4 +21,11 @@ Compose For MySQL
 	Compose for MySQL への接続
 		connecting-bluemix-app.md
 		connecting-external.md
+	{: .navgroup-end}
+
+	{: .navgroup id="reference"}
+	reference-versions.md
+	reference-architecture.md
+	reference-connections.md
+	reference-other-offerings.md
 	{: .navgroup-end}

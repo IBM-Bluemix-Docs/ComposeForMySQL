@@ -285,6 +285,6 @@ results.each {|row| puts row["Database"]}
 ```
 注释
 - `config` 散列包含所有连接配置，包括设置 SSL 连接。有关所有配置选项的详细信息，请参阅 [MySQL2 自述文件](https://github.com/brianmario/mysql2)。
-- 要使用自签名证书设置安全连接，请设置 `sslCA` 和 `sslverify`。`sslCA` 是包含证书的 `.pem` 或 `.cert` 文件的路径，而 `sslverify` 设置为 `true` 以检查有效证书。
+- 要使用自签名证书设置安全连接，请设置 `sslCA` 和 `sslverify`。`sslCA` 是包含证书的 `.pem` 或 `.cert` 文件的路径，`sslverify` 设置为 `true` 以检查有效证书。
 -  `Mysql2::Client.new` 构造函数使用 `config` 中的连接配置来初始化新的连接变量。
 - `results` 包含一组散列，这些散列会迭代并打印到控制台。

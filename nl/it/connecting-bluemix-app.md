@@ -31,4 +31,8 @@ Nome campo|Descrizione
 `ca_certificate_base64`|Un certificato auto-firmato che viene utilizzato per confermare che un'applicazione sia collegata al server corretto. Il certificato si basa su codifica base64.
 `deployment_id`|Un identificativo interno per il servizio come creato in Compose.
 `uri`|L'URI da utilizzare quando esegui il collegamento al servizio, include lo schema (`mysql:`), il nome utente e la password amministratore, il nome host del server e il numero di porta a cui collegarsi.
+`uri_direct_1`|Un URI secondario che può essere utilizzato durante il collegamento al servizio. Formato come l'`uri`.
+`uri_cli_1`|Una riga di comando shell `mysql` secondaria che esegue il collegamento all'istanza del database.
 {: caption="Tabella 1. Credenziali di Compose for MySQL" caption-side="top"}
+
+**Nota:** due portali `haproxy` forniscono l'accesso al servizio MySQL. Possono essere utilizzati sia `uri` che `uri_direct_1` per il collegamento. Nelle tue applicazioni, passa da `uri` a `uri_direct_1` per gestire le risposte agli errori di connessione.

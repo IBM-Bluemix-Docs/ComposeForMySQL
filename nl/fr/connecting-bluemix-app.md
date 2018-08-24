@@ -33,4 +33,8 @@ Nom de zone|Description
 `uri`|Identificateur URI qui est utilisé pour la connexion au service et
 qui comprend le schéma (`mysql:`), le nom et le mot de passe de
 l'administrateur, le nom d'hôte du serveur, le numéro de port auquel se connecter et le nom vhost.
+`uri_direct_1`|Second identificateur URI qui peut être utilisé lors de la connexion au service. Utilise le même format qu'`uri`.
+`uri_cli_1`|Seconde ligne de commande shell `mysql` qui permet d'établir la connexion à l'instance de base de données.
 {: caption="Tableau 1. Données d'identification Compose for MySQL" caption-side="top"}
+
+**Remarque :** deux portails `haproxy` permettent d'accéder au service MySQL. Les zones `uri` et `uri_direct_1` peuvent toutes deux être utilisées pour établir la connexion. Dans vos applications, utilisez `uri` ou `uri_direct_1` pour gérer les réponses aux pannes de connexion.
