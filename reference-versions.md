@@ -19,7 +19,7 @@ Deployable Versions | Preferred Version
 5.7.20 (beta), 5.7.20 (beta) | 5.7.22 (beta)
 {: caption="Table 1. {{site.data.keyword.composeForMySQL}} versions" caption-side="top"}
 
-You can find the list of available versions on the {{site.data.keyword.composeForMySQL}} [catalog page](https://console.{DomainName}/catalog/services/compose-for-mysql).
+You can find the list of available versions on the {{site.data.keyword.composeForMySQL}} [catalog page](https://{DomainName}/catalog/services/compose-for-mysql).
 
 ## Preferred Version
 

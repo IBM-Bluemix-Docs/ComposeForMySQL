@@ -22,8 +22,8 @@ For more information about other Compose services, see the [Compose Articles](ht
 
 ## {{site.data.keyword.cloud_notm}} Enterprise
 
-{{site.data.keyword.composeEnterprise}} provides a private, dedicated and isolated cluster for customers. To use this plan, a {{site.data.keyword.composeEnterprise}} cluster must be provisioned through the {{site.data.keyword.composeEnterprise_full_notm}} service in the [IBM Cloud catalog](https://console.{DomainName}/catalog/).
+{{site.data.keyword.composeEnterprise}} provides a private, dedicated and isolated cluster for customers. To use this plan, a {{site.data.keyword.composeEnterprise}} cluster must be provisioned through the {{site.data.keyword.composeEnterprise_full_notm}} service in the [IBM Cloud catalog](https://{DomainName}/catalog/).
 
 Once you have a {{site.data.keyword.composeEnterprise}} cluster, selecting the {{site.data.keyword.composeForMySQL}} service with the Enterprise plan will provision the service onto your dedicated cluster. 
 
-For more information, see the [{{site.data.keyword.composeEnterprise}} catalog page](https://console.{DomainName}/catalog/services/compose-enterprise) and [documentation](https://console.{DomainName}/docs/services/ComposeEnterprise/index.html#about-compose-enterprise).
+For more information, see the [{{site.data.keyword.composeEnterprise}} catalog page](https://{DomainName}/catalog/services/compose-enterprise) and [documentation](https://{DomainName}/docs/services/ComposeEnterprise/index.html#about-compose-enterprise).

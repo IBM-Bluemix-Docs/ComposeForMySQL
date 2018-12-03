@@ -78,7 +78,7 @@ The new service instance is automatically named "mysql-restore-[timestamp]", and
 
 Use the following steps to restore a backup from a running MySQL service to a new MySQL service by using the {{site.data.keyword.cloud_notm}} CLI.
 
-1. If you need to, [download and install the CLI](https://console.{DomainName}/docs/cli/index.html#overview). 
+1. If you need to, [download and install the CLI](https://{DomainName}/docs/cli/index.html#overview). 
 2. Find the backup that you would like to restore from on the _Backups_ page on your service and copy the backup ID.
   **Or**  
   Use the backups endpoint to find a backup and its ID through the Compose API.
