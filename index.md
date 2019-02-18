@@ -12,7 +12,7 @@ lastupdated: "2018-03-26"
 {:pre: .pre}
 
 # About {{site.data.keyword.composeForMySQL}}
-{: #about-compose-for-mysql}
+{: #about}
 
 With a broad subset of ANSI SQL 99 and a wide set of its own extensions, including JSON document, full text search and updatable views, MySQL offers a rich palette for developers to draw on in their applications. Administrators can also find a wide selection of database management tools that can work with MySQL. {{site.data.keyword.composeForMySQL_full}} extends the capabilities of MySQL by managing it for you, offering an easy, auto-scaling deployment system that delivers high availability and redundancy, and automated backups.
 {:shortdesc}
@@ -33,9 +33,9 @@ You can manage your service from the service dashboard. Here you can find inform
 - Change the service password
 - Use whitelists to restrict access to your databases. 
 
-For more information, see [Settings](./dashboard-settings.html).
+For more information, see [Settings](/docs/services/ComposeForMySQL?topic=compose-for-mysql-dashboard-settings).
 
-{{site.data.keyword.composeForMySQL}} relies on Cloud Foundry roles to manage access to the service. Only users with the Developer role can see or use the service dashboard. For more information on Cloud Foundry roles, see the [Cloud Foundry access](https://{DomainName}/docs/iam/cfaccess.html#cfaccess) and the [Managing Cloud Foundry access](https://{DomainName}/docs/iam/mngcf.html#mngcf) pages.
+{{site.data.keyword.composeForMySQL}} relies on Cloud Foundry roles to manage access to the service. Only users with the Developer role can see or use the service dashboard. For more information on Cloud Foundry roles, see the [Cloud Foundry access](/docs/iam?topic=iam-cfaccess) and the [Managing Cloud Foundry access](/docs/iam?topic=iam-mngcf) pages.
 {: tip}
 
 ## Connecting to {{site.data.keyword.composeForMySQL}}
@@ -44,8 +44,8 @@ You can connect to your service by using the credentials that are created along 
 
 ## Connecting an {{site.data.keyword.cloud_notm}} application to {{site.data.keyword.composeForMySQL}}
 
-To connect an {{site.data.keyword.cloud_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect an {{site.data.keyword.cloud_notm}} application to your service in [Connecting an {{site.data.keyword.cloud_notm}} Application](./connecting-bluemix-app.html).
+To connect an {{site.data.keyword.cloud_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect an {{site.data.keyword.cloud_notm}} application to your service in [Connecting an {{site.data.keyword.cloud_notm}} Application](/docs/services/ComposeForMySQL?topic=compose-for-mysql-ibmcloud-cf-app).
 
 ## Connecting to {{site.data.keyword.composeForMySQL}} from outside {{site.data.keyword.cloud_notm}}
 
-If you want to connect to your service from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](./connecting-external.html).
+If you want to connect to your service from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](/docs/services/ComposeForMySQL?topic=compose-for-mysql-external-app).

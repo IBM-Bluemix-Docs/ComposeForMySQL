@@ -12,7 +12,7 @@ lastupdated: "2017-06-16"
 {:pre: .pre}
 
 # Connecting an external application
-{: #connecting-external-app}
+{: #external-app}
 
 You can connect an external application to {{site.data.keyword.composeForMySQL_full}} in two ways.
 

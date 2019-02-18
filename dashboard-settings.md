@@ -13,6 +13,7 @@ lastupdated: "2017-11-20"
 {:tip: .tip}
 
 # Settings
+{: #dashboard-settings}
 
 Use these features to adapt your {{site.data.keyword.composeForMySQL_full}} service to better suit your needs and requirements.
 
@@ -21,7 +22,6 @@ Use these features to adapt your {{site.data.keyword.composeForMySQL_full}} serv
 If a new version of the database is available, a drop-down menu appears, from which you can select the version that you want to upgrade to. Otherwise, your service is on the newest version available, and the panel displays the current version information.
 
 ![The Version panel](./images/mysql-version-show.png "The Version panel")
-
 
 ## Scaling Resources
 
@@ -56,7 +56,7 @@ You might find it necessary to change the password of your service.
 
 Changing the password invalidates the existing connection string and generates a new one. This will cause a service interruption until connected applications are updated with the new connection string. You will have to do this by supplying the new connection string to your applications.
 
-For more information about connecting your applications, see [Connecting an {{site.data.keyword.cloud}} Application](./connecting-bluemix-app.html), and [Connecting an external application](./connecting-external.html).
+For more information about connecting your applications, see [Connecting an {{site.data.keyword.cloud}} Application](/docs/services/ComposeForMySQL?topic=compose-for-mysql-ibmcloud-cf-app), and [Connecting an external application](/docs/services/ComposeForMySQL?topic=compose-for-mysql-external-app).
 
 
 ## Using Whitelists

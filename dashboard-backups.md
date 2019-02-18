@@ -12,7 +12,7 @@ lastupdated: "2018-03-02"
 {:pre: .pre}
 
 # Backups
-{: #backups}
+{: #dashboard-backups}
 
 You can create and download backups from the _Backups_ tab of the _Manage_ page of your service dashboard. Daily, weekly, monthly, and on-demand backups are available. They are retained according to the following schedule:
 
@@ -78,7 +78,7 @@ The new service instance is automatically named "mysql-restore-[timestamp]", and
 
 Use the following steps to restore a backup from a running MySQL service to a new MySQL service by using the {{site.data.keyword.cloud_notm}} CLI.
 
-1. If you need to, [download and install the CLI](https://{DomainName}/docs/cli/index.html#overview). 
+1. If you need to, [download and install the CLI](/docs/cli?topic=cloud-cli-overview). 
 2. Find the backup that you would like to restore from on the _Backups_ page on your service and copy the backup ID.
   **Or**  
   Use the backups endpoint to find a backup and its ID through the Compose API.
