@@ -94,18 +94,18 @@ The {{site.data.keyword.cloud_notm}} CLI tool is what you'll use to communicate 
 {{site.data.keyword.cloud_notm}} uses a manifest file - `manifest.yml` to associate an application with a service. Follow these steps to create your manifest file.
 
 1. In an editor, open a new file and add the following:
-
   ```
   ---
   applications:
-  - name:    compose-mysql-helloworld-nodejs
-    host:    compose-mysql-helloworld-nodejs
+  - name: compose-mysql-helloworld-nodejs
+    routes:
+      - route: compose-mysql-helloworld-nodejs.us-south.cf.appdomain.cloud
     memory:  128M
     services:
-      - my-compose-for-mysql-service
-  ```
+      - example-compose-for-mysql
+```
 
-2. Change the `host` value to something unique. The host that you choose determines the subdomain of your application's URL:  `<host>.mybluemix.net`.
+2. Change the `route` value to something unique. The route that you choose determines the subdomain of your application's URL: `<route>.{region}.cf.appdomain.cloud`. Be sure the `{region}` matches where your application is deployed.
 3. Change the `name` value. The value you choose will be the name of the app as it appears in your {{site.data.keyword.cloud_notm}} dashboard.
 4. Update the `services` value to match the name of the service you created in [Create a {{site.data.keyword.composeForMySQL}} service instance](#create-service).
 
@@ -129,7 +129,7 @@ If your application is not listed, repeat Steps 7 ad 8, making sure that you hav
 
 ## Step 9. Use the app
 
-Now, when you visit `<host>.mybluemix.net/` you will be able to view the contents of your {{site.data.keyword.composeForMySQL}} collection. As you add words and their definitions, they are added to the database and displayed. If you stop and restart the app, you'll see any words and definitions you've already added are now listed.
+Now, when you visit `<route>.{region}.cf.appdomain.cloud/` you will be able to view the contents of your {{site.data.keyword.composeForMySQL}} collection. As you add words and their definitions, they are added to the database and displayed. If you stop and restart the app, you'll see any words and definitions you've already added are now listed.
 
 
 ## Running the App Locally
