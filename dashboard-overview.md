@@ -3,6 +3,9 @@
 Copyright:
   years: 2017,2018
 lastupdated: "2018-05-07"
+
+subcollection: compose-for-mysql
+
 ---
 
 {:new_window: target="_blank"}

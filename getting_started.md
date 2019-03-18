@@ -3,6 +3,9 @@
 copyright:
   years: 2016,2018
 lastupdated: "2018-05-23"
+
+subcollection: compose-for-mysql
+
 ---
 
 {:shortdesc: .shortdesc}
