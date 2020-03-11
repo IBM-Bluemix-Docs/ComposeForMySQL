@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-mysql" category="databases" audience="service" href="/docs/ComposeForMySQL?topic=compose-for-mysql-about path="ComposeForMySQL"}
+{: .toc subcollection="compose-for-mysql" category="databases" audience="service" href="/docs/ComposeForMySQL?topic=compose-for-mysql-about" path="ComposeForMySQL"}
 Compose For MySQL
 
 	{: .navgroup id="learn"}
