@@ -31,4 +31,4 @@ For more information about other Compose services, see the [Compose Articles](ht
 
 Once you have a {{site.data.keyword.composeEnterprise}} cluster, selecting the {{site.data.keyword.composeForMySQL}} service with the Enterprise plan will provision the service onto your dedicated cluster. 
 
-For more information, see the [{{site.data.keyword.composeEnterprise}} catalog page](https://{DomainName}/catalog/services/compose-enterprise) and [documentation](https://{DomainName}/docs/services/ComposeEnterprise/index.html).
+For more information, see the [{{site.data.keyword.composeEnterprise}} catalog page](https://{DomainName}/catalog/compose-enterprise) and [documentation](https://{DomainName}/docs/ComposeEnterprise/index.html).

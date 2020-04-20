@@ -29,7 +29,7 @@ The _Deployment Details_ panel shows details of your service.
 
 ### Type
 
-The type of database that is offered by the service, and the database version that your service uses. If a more recent database version is available, a notification is displayed, together with a link to the [Upgrade version](/docs/services/ComposeForMySQL?topic=compose-for-mysql-dashboard-settings) section of your service dashboard.
+The type of database that is offered by the service, and the database version that your service uses. If a more recent database version is available, a notification is displayed, together with a link to the [Upgrade version](/docs/ComposeForMySQL?topic=compose-for-mysql-dashboard-settings) section of your service dashboard.
 
 ### ID
 
@@ -45,17 +45,17 @@ Making administrative changes to your service (such as scaling, or taking a manu
 
 ## Connection Strings
 
-Connection Strings can be used by some client libraries and contain all the information that is needed for other libraries to connect. You can find out how to use a Connection String to connect to your service in [Connecting an external application](/docs/services/ComposeForMySQL?topic=compose-for-mysql-external-app).
+Connection Strings can be used by some client libraries and contain all the information that is needed for other libraries to connect. You can find out how to use a Connection String to connect to your service in [Connecting an external application](/docs/ComposeForMySQL?topic=compose-for-mysql-external-app).
 
 You'll find each Connection String for your service in a different tab in the _Connection Strings_ panel.
 
 ### Connection String
 
-The **Connection String** can be used by some client libraries and contains all the information that is needed for other libraries to connect. You can find out how to use the Connection String to connect in [Connecting an external application](/docs/services/ComposeForMySQL?topic=compose-for-mysql-external-app).
+The **Connection String** can be used by some client libraries and contains all the information that is needed for other libraries to connect. You can find out how to use the Connection String to connect in [Connecting an external application](/docs/ComposeForMySQL?topic=compose-for-mysql-external-app).
 
 ### Command Line
 
-The **Command Line** is a preformatted command that you can use to connect to MySQL. To do so, you must install MySQL on your local machine. You can find out about how to use it in [Connecting an external application](/docs/services/ComposeForMySQL?topic=compose-for-mysql-external-app).
+The **Command Line** is a preformatted command that you can use to connect to MySQL. To do so, you must install MySQL on your local machine. You can find out about how to use it in [Connecting an external application](/docs/ComposeForMySQL?topic=compose-for-mysql-external-app).
 
 ### SSL Certificate
 
