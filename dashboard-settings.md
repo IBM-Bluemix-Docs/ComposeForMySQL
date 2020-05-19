@@ -6,7 +6,7 @@ lastupdated: "2017-11-20"
 
 keywords: mysql, compose
 
-subcollection: compose-for-mysql
+subcollection: ComposeForMySQL
 
 ---
 
@@ -61,7 +61,7 @@ You might find it necessary to change the password of your service.
 
 Changing the password invalidates the existing connection string and generates a new one. This will cause a service interruption until connected applications are updated with the new connection string. You will have to do this by supplying the new connection string to your applications.
 
-For more information about connecting your applications, see [Connecting an {{site.data.keyword.cloud}} Application](/docs/ComposeForMySQL?topic=compose-for-mysql-ibmcloud-cf-app), and [Connecting an external application](/docs/ComposeForMySQL?topic=compose-for-mysql-external-app).
+For more information about connecting your applications, see [Connecting an {{site.data.keyword.cloud}} Application](/docs/ComposeForMySQL?topic=ComposeForMySQL-ibmcloud-cf-app), and [Connecting an external application](/docs/ComposeForMySQL?topic=ComposeForMySQL-external-app).
 
 
 ## Using Whitelists

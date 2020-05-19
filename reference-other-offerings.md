@@ -5,7 +5,7 @@ lastupdated: "2018-06-06"
 
 keywords: mysql, compose
 
-subcollection: compose-for-mysql
+subcollection: ComposeForMySQL
 
 ---
 

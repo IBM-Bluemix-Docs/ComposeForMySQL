@@ -4,7 +4,7 @@ copyright:
   years: 2016,2018
 lastupdated: "2018-05-23"
 
-subcollection: compose-for-mysql
+subcollection: ComposeForMySQL
 
 ---
 
@@ -176,10 +176,10 @@ To understand more about how the [sample app](https://github.com/IBM-Cloud/compo
 
 To start exploring your {{site.data.keyword.composeForMySQL}} service, see the following topics about the service dashboard:
 
-- [Dashboard Overview](/docs/ComposeForMySQL?topic=compose-for-mysql-dashboard-overview)
-- [Backups](/docs/ComposeForMySQL?topic=compose-for-mysql-dashboard-backups)
-- [Settings](/docs/ComposeForMySQL?topic=compose-for-mysql-dashboard-settings)
+- [Dashboard Overview](/docs/ComposeForMySQL?topic=ComposeForMySQL-dashboard-overview)
+- [Backups](/docs/ComposeForMySQL?topic=ComposeForMySQL-dashboard-backups)
+- [Settings](/docs/ComposeForMySQL?topic=ComposeForMySQL-dashboard-settings)
 
-For information about the credentials you created for the application to connect to your service, see [Available Credentials](/docs/ComposeForMySQL?topic=compose-for-mysql-ibmcloud-cf-app).
+For information about the credentials you created for the application to connect to your service, see [Available Credentials](/docs/ComposeForMySQL?topic=ComposeForMySQL-ibmcloud-cf-app).
 
 [ibm_cloud_signup_url]: https://ibm.biz/compose-for-mysql-signup
