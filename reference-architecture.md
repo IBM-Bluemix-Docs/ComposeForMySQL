@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2016,2018
-lastupdated: "2018-06-07"
+  years: 2016, 2020
+lastupdated: "2020-12-07"
 
 keywords: mysql, compose
 
@@ -17,7 +17,7 @@ subcollection: ComposeForMySQL
 
 ## Replication
 
-An {{site.data.keyword.composeForMySQL_full}} deployment starts with three data nodes in a cluster, spread over the region's availability zones. Data is replicated across all three nodes; if one data member in the cluster becomes unreachable, your cluster continues to operate normally. The cluster is configured so that if the leader member in the cluster fails, the current slave is promoted to leader within 60 seconds of the leader becoming unresponsive. 
+An {{site.data.keyword.composeForMySQL_full}} deployment starts with three data nodes in a cluster, spread over the region's availability zones. Data is replicated across all three nodes; if one data member in the cluster becomes unreachable, your cluster continues to operate normally. The cluster is configured so that if the leader member in the cluster fails, the current follower is promoted to leader within 60 seconds of the leader becoming unresponsive. 
 
 ## Disk Encryption
 
