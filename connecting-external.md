@@ -65,18 +65,19 @@ To directly connect to and administer your {{site.data.keyword.composeForMySQL}}
 
 To access your deployment via the terminal, copy and paste the command line string that is provided in the *Connection information* panel into your terminal to connect to your deployment.
 
+Example command: 
 ```shell
-mysql -u [username] -p --host aws-us-east-1-portal.5.dblayer.com --port 16967 --ssl-mode=REQUIRED
+mysql -u [username] -p --host us-east-1-portal.5.dblayer.com --port 16967 --ssl-mode=REQUIRED
 ```
 
 To enable SSL when connecting, use `--ssl-mode=REQUIRED`. The default user is named "admin", which you use as the user name in the `-u` parameter. After running the command, you'll be prompted to enter the admin user's password, which you can get from the credentials section of the *Connection information* panel.
 
 Compose for MySQL has SSL enabled by default, but when connecting, you should take extra precautions by using the`--ssl-mode=REQUIRED` option on the command line. This stops MySQL falling back, for whatever reason, to an unencrypted connection.
 
-If you prefer, you can use the self-signed certificate to verify. Change the `--ssl-mode` parameter to `--ssl-mode=VERIFY_CA` and add `--ssl-ca` with the path and name of your .pem file:
+If you prefer, you can use the self-signed certificate to verify. Change the `--ssl-mode` parameter to `--ssl-mode=VERIFY_CA` and add `--ssl-ca` with the path and name of your .pem file as shown in this example:
 
 ```shell
-mysql -u [username] -p --host aws-us-east-1-portal.5.dblayer.com --port 16967 --ssl-mode=VERIFY_CA --ssl-ca=<your_file>.pem
+mysql -u [username] -p --host us-east-1-portal.5.dblayer.com --port 16967 --ssl-mode=VERIFY_CA --ssl-ca=<your_file>.pem
 ```
 
 ## Connecting Your Application
@@ -95,7 +96,7 @@ npm install mysql --save
 
 The driver and its dependencies are installed in the `node_modules` folder, and the driver appears under `dependencies` in the `package.json` file.
 
-You can use the following code to connect to MySQL.
+You can use the following example code to connect to MySQL.
 
 ```javascript
 const mysql = require('mysql');  
@@ -103,7 +104,7 @@ const fs = require('fs');
 
 const connection = mysql.createConnection(  
     {
-        host: 'aws-us-east-1-portal.23.dblayer.com',
+        host: 'us-east-1-portal.23.dblayer.com',
         port: 15942,
         user: 'admin',
         password: 'mypass',
@@ -136,7 +137,7 @@ To connect to MySQL using Go, first install the _go-sql-driver_ package to your 
 go get github.com/go-sql-driver/mysql
 ```
 
-You can use the following code to connect to MySQL.
+You can use the following exmaple code to connect to MySQL.
 
 ```go
 package main
@@ -149,7 +150,7 @@ import (
 )
 
 func main() {  
-    db, err := sql.Open("mysql", "admin:mypass@tcp(aws-us-east-1-portal.23.dblayer.com:15918)/compose?tls=skip-verify")
+    db, err := sql.Open("mysql", "admin:mypass@tcp(us-east-1-portal.23.dblayer.com:15918)/compose?tls=skip-verify")
 	if err != nil {
         log.Fatal(err)
     }
@@ -183,7 +184,7 @@ import mysql.connector
 config = {  
     'user': 'admin',
     'password': 'mypass',
-    'host': 'aws-us-east-1-portal.23.dblayer.com',
+    'host': 'us-east-1-portal.23.dblayer.com',
     'port': 15942,
     'database': 'compose',
 
@@ -213,7 +214,7 @@ Notes:
 
 To connect with Java, first download and install MySQL's [Connector/J JDBC driver](https://dev.mysql.com/downloads/connector/j/).
 
-You can then connect to a deployment by using the following code:
+You can then connect to a deployment by using the following example code:
 
 ```java
 import java.sql.*;
@@ -227,7 +228,7 @@ public class Main {
 
        String user = "admin";
        String password = "mypass";
-       String URL = "jdbc:mysql://aws-us-east-1-portal.23.dblayer.com:15942/compose" +
+       String URL = "jdbc:mysql://us-east-1-portal.23.dblayer.com:15942/compose" +
 
                 "?verifyServerCertificate=true"+
                 "&useSSL=true" +
@@ -272,11 +273,11 @@ keytool -import --alias composeCert -file ./cert.pem -keystore ./truststore -sto
 
 There are a number of MySQL drivers for Ruby. The sample connection code uses [MySQL2](https://github.com/brianmario/mysql2).
 
-You can connect to MySQL by installing MySQL2 according to the instructions in the driver's GitHub repository and by using the following code:
+You can connect to MySQL by installing MySQL2 according to the instructions in the driver's GitHub repository and by using the following example code:
 ```ruby
 require "mysql2"  
 config = {  
-    "hostname": "aws-us-east-1-portal.23.dblayer.com",
+    "hostname": "us-east-1-portal.23.dblayer.com",
     "port": 15942,
     "database": "compose",
     "username": "admin",
